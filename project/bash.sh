@@ -2,8 +2,8 @@
 
 export PROJECT="project_1"
 
-entrypoint="/bin/bash"
 containername="python-ai-bash"
+entrypoint="/bin/bash"
 
-cmd="sh/start_container.sh ${containername} ${entrypoint}"
+cmd="../run/miw_container.sh ${containername} ${entrypoint}"
 eval ${cmd}
