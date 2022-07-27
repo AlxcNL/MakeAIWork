@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/env python
 # Author: Jacques de Hooge
 
 # Create [2, 4, 6, ..., 20]

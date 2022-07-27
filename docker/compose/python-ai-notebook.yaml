@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  python-ai-jupyter:
+    image: $IMAGE
+    ports:
+      - 8888:8888
+    tty: false    
+    volumes:
+      - ${HOSTPATH_NOTEBOOKS}:/home/student/notebooks      
