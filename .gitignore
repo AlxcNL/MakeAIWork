@@ -5,3 +5,5 @@ project/notebooks/.ipynb_checkpoints
 project/.bash_history
 notebooks/.ipynb_checkpoints/
 notebooks/*_answers.ipynb
+log.txt
+notebooks/examples
