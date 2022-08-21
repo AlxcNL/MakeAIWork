@@ -10,7 +10,7 @@ cmdRepl="docker/run/miw_container.sh python-repl"
 if (! command -v "docker" &> /dev/null ) then
   echo Try locally installed python
   cmdRepl="ptpython"
-  cmdScript="ptpython"
+  cmdScript="python"
 fi
 
 # Run with script?
@@ -28,5 +28,5 @@ if (! command -v ${cmd} &> /dev/null ) then
   exit -1
 fi
 
-printf "%s cmd : %s\n" "$0" "${cmd}"
+printf "%s cmd : \n\t%s\n\n" "$0" "${cmd}"
 eval ${cmd}
