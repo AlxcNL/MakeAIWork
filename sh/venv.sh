@@ -2,8 +2,8 @@
 #!/bin/bash
 
 # Install virtualenv
-pip3 install --user --upgrade pip
-pip3 install virtualenv
+python3 -m pip install --upgrade pip
+python3 -m pip install virtualenv
 
 # Create virtual environment env
 python3 -m venv env
