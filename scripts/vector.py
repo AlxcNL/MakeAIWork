@@ -11,3 +11,9 @@ class Vector:
     def multiplyVector(self, otherVector):
         pass
     
+    def printVector(self):
+        print(f"Dit is de vector: {self.scalarList}")
+    
+list = [9, 8]    
+v = Vector(list)
+v.printVector()    
