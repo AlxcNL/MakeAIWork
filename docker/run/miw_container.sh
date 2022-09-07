@@ -38,8 +38,8 @@ function makeWindowsProof {
 function makeMacProof {
     # Support Apple M* processors
     arch=$(uname -m)
-    printf "Use architecture %s\n" "${arch}"
-    dockerPostfix=" --platform linux/${arch}"
+    printf "Detected architecture : %s\n" "${arch}"
+    dockerPostfix=" --platform linux/${arch}/v8"
 
     # Set global variable DISPLAY to enable X Window System
     hostIP=$(ifconfig | grep 'inet ' | awk '{print $2}' | tail -n 1)
