@@ -29,6 +29,6 @@ if [[ "${runnable}" == "docker" ]]; then
     if [ "${url}" != "" ]; then
         rm log.txt
         printf "Open %s in your browser\n" "${url}"
-        python3 -m webbrowser ${url}
+        python -m webbrowser ${url}
     fi
 fi

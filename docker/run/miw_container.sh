@@ -38,8 +38,8 @@ function makeWindowsProof {
 function makeMacProof {
     # Support Apple M* processors
     arch=$(uname -m)
-    printf "Use architecture %s\n" "${arch}"
-    dockerPostfix=" --platform linux/${arch}"
+    printf "Detected architecture : %s\n" "${arch}"
+    dockerPostfix=" --platform linux/${arch}/v8"
 
     # Set global variable DISPLAY to enable X Window System
     hostIP=$(ifconfig | grep 'inet ' | awk '{print $2}' | tail -n 1)
@@ -96,9 +96,6 @@ case "${mode}" in
     jupyter*)
         image="jaboo/miw-notebook:0.1"
         composefile="${composePath}/python-ai-jupyter.yaml"
-        version="0.1"
-        image="${repo}/miw-notebook:${version}"
-        export IMAGE=${image}
         export CONTAINER_NAME=${containerName}
         cmd="docker/compose/up.sh ${composefile}";;
     python-repl*)

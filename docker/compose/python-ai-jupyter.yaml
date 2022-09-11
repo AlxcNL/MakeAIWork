@@ -3,7 +3,7 @@ version: '3.7'
 services:
   python-ai-jupyter:
     container_name: $CONTAINER_NAME
-    image: $IMAGE
+    image: jaboo/miw-notebook:latest
     pull_policy: always
     ports:
       - 8888:8888
