@@ -95,9 +95,6 @@ case "${mode}" in
         cmd="${cmd}${dockerPostfix} --entrypoint ${entryPoint} ${image}";;
     jupyter*)
         composefile="${composePath}/python-ai-jupyter.yaml"
-        version="latest"
-        image="${repo}/miw-notebook:${version}"
-        export IMAGE=${image}
         export CONTAINER_NAME=${containerName}
         cmd="docker/compose/up.sh ${composefile}";;
     python-repl*)
